@@ -50,47 +50,128 @@ public class Menu {
             Scanner scanner = new Scanner(System.in);
             String selection = scanner.nextLine();
             switch (selection){
-                case "1" : significantTerrainGenerator();
-                case "2" : terrainFeatureGenerator();
-                case "3" : nationConstructionGenerator();
-                case "4" : nationThemeGenerator();
-                case "5" : societyPhysicalAppearance();
-                case "6" : societyValuesGenerator();
-                case "7" : governmentConstruction();
-                case "8" : governmentDetails();
-                case "9" : historyConstruction();
-                case "10": historicalEventsConstruction();
-                case "11": religionConstruction();
-                case "12": templeDetailConstruction();
-                case "13": malevolentCultGenerator();
-                case "14": ruinsGenerator();
-                case "15": placeOfAdventureGenerator();
-                case "16": ruralVillageGenerator();
-                case "17": majorCityGenerator();
-                case "18": tribesExileGenerator();
-                case "19": communityTagGenerator();
-                case "20": aristocraticCourtGenerator();
-                case "21": businessCourtGenerator();
-                case "22": criminalCourtGenerator();
-                case "23": familialClanGenerator();
-                case "24": religiousCourtGenerator();
-                case "25": courtTagGenerator();
-                case "26": ruinFeatureGenerator();
-                case "27": ruinTagGenerator();
-                case "28": wildernessEncounterGenerator();
-                case "29": wildernessTag();
-                case "30": combatChallengeComplications();
-                case "31": typesOfRuinSite();
-                case "32": frameworkOfInhabitation();
-                case "33": typesOfInhabitants();
-                case "34": roomsOfInterest();
-                case "35": hexPointsOfInterest();
-                case "36": roomLayoutAndMapFeatures();
-                case "37": stockingRoomGenerator();
-                case "38": wanderingEncounterGenerator();
-                case "39": investigationGenerator();
-                case "40": socialChallengeGenerator();
-                case "41" : return true;
+                case "1" :
+                    significantTerrainGenerator();
+                    break;
+                case "2" :
+                    terrainFeatureGenerator();
+                    break;
+                case "3" :
+                    nationConstructionGenerator();
+                    break;
+                case "4" :
+                    nationThemeGenerator();
+                    break;
+                case "5" :
+                    societyPhysicalAppearance();
+                    break;
+                case "6" :
+                    societyValuesGenerator();
+                    break;
+                case "7" :
+                    governmentConstruction();
+                    break;
+                case "8" :
+                    governmentDetails();
+                    break;
+                case "9" :
+                    historyConstruction();
+                    break;
+                case "10" :
+                    historicalEventsConstruction();
+                    break;
+                case "11" :
+                    religionConstruction();
+                    break;
+                case "12" :
+                    templeDetailConstruction();
+                    break;
+                case "13" :
+                    malevolentCultGenerator();
+                    break;
+                case "14" :
+                    ruinsGenerator();
+                    break;
+                case "15" :
+                    placeOfAdventureGenerator();
+                    break;
+                case "16" :
+                    ruralVillageGenerator();
+                    break;
+                case "17" :
+                    majorCityGenerator();
+                    break;
+                case "18" :
+                    tribesExileGenerator();
+                    break;
+                case "19" :
+                    communityTagGenerator();
+                    break;
+                case "20" :
+                    aristocraticCourtGenerator();
+                    break;
+                case "21" :
+                    businessCourtGenerator();
+                    break;
+                case "22" :
+                    criminalCourtGenerator();
+                    break;
+                case "23" :
+                    familialClanGenerator();
+                    break;
+                case "24" :
+                    religiousCourtGenerator();
+                    break;
+                case "25" :
+                    courtTagGenerator();
+                    break;
+                case "26" :
+                    ruinFeatureGenerator();
+                    break;
+                case "27" :
+                    ruinTagGenerator();
+                    break;
+                case "28" :
+                    wildernessEncounterGenerator();
+                    break;
+                case "29" :
+                    wildernessTag();
+                    break;
+                case "30" :
+                    combatChallengeComplications();
+                    break;
+                case "31" :
+                    typesOfRuinSite();
+                    break;
+                case "32" :
+                    frameworkOfInhabitation();
+                    break;
+                case "33" :
+                    typesOfInhabitants();
+                    break;
+                case "34" :
+                    roomsOfInterest();
+                    break;
+                case "35" :
+                    hexPointsOfInterest();
+                    break;
+                case "36" :
+                    roomLayoutAndMapFeatures();
+                    break;
+                case "37" :
+                    stockingRoomGenerator();
+                    break;
+                case "38" :
+                    wanderingEncounterGenerator();
+                    break;
+                case "39" :
+                    investigationGenerator();
+                    break;
+                case "40" :
+                    socialChallengeGenerator();
+                    break;
+                case "41" :
+                    return true;
             }
         }
     }
