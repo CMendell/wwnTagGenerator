@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Menu {
@@ -175,8 +176,210 @@ public class Menu {
             }
         }
     }
-    public void significantTerrainGenerator(){}
-    public void terrainFeatureGenerator(){}
+    public void significantTerrainGenerator(){
+        Random random = new Random();
+        int i = random.nextInt(20);
+        switch (i){
+            case 0:
+                System.out.println("Ancient farmland. A huge stretch of land\n" +
+                        "was re-engineered for optimal farming.");
+                break;
+            case 1:
+                System.out.println("""
+                        Arratu wasteland. An area here was
+                        once xenoformed by the Outsiders into
+                        an environment hostile to humanity or one
+                        inhabited by dangerous alien lifeforms.""");
+                break;
+            case 2:
+                System.out.println("Blasted lands. Radioactive or scorched\n" +
+                        "over by ancient war. Many ruins are likely.");
+                break;
+            case 3:
+                System.out.println("""
+                        Canyons. A region with extensive canyons
+                        cut by rivers present or long-vanished. Make
+                        sure the rivers don’t climb after leaving them.""");
+                break;
+            case 4:
+                System.out.println("Dense forest. Trackless, dark, and an\n" +
+                        "effective natural barrier.");
+                break;
+            case 5:
+                System.out.println("Grasslands. A broad sweep of savanna or\n" +
+                        "grassy plains is a coherent whole here.");
+                break;
+            case 6:
+                System.out.println("Islands. There’s a single significant island\n" +
+                        "off the coast or an archipelago of some note");
+                break;
+            case 7:
+                System.out.println("""
+                        Jagged mountains. A new or resharpened mountain range forms a barrier
+                        in the region. The mountains are young, tall,
+                        and likely cast a substantial rain shadow.""");
+                break;
+            case 8:
+                System.out.println("Jungle. A classic adventure-worthy jungle\n" +
+                        "of wild, semi-alien flora and fauna.");
+                break;
+            case 9:
+                System.out.println("Light forest. Interspersed with other terrain.");
+                break;
+            case 10:
+                System.out.println("Megaplex. The ruins of a single huge\n" +
+                        "ancient structure stretch for endless miles.");
+                break;
+            case 11:
+                System.out.println("""
+                        Pit. A Deep or some other underground
+                        megastructure collapsed and left a hole with
+                        a diameter measured in tens of miles""");
+                break;
+            case 12:
+                System.out.println("Rain forest. Vast, damp, and green");
+                break;
+            case 13:
+                System.out.println("""
+                        Rocky hills. Rough and stony, with little
+                        arable land. Herding and raiding are the
+                        most profitable employments here.""");
+                break;
+            case 14:
+                System.out.println("Rolling hills. A stretch of gently rolling hills\n" +
+                        "makes for good agricultural land.");
+                break;
+            case 15:
+                System.out.println("""
+                        Sand desert. This desert is a waste of sand
+                        and dunes. It may be from a rain shadow, or
+                        it might be a legacy of ancient war""");
+                break;
+            case 16:
+                System.out.println("""
+                        Scrub desert. These often appear on the
+                        leeward side of mountain ranges. Borders
+                        will often be grasslands or savanna""");
+                break;
+            case 17:
+                System.out.println("Swamp. A sinking river, lake margin, or wet\n" +
+                        "coastal delta forms a vast bog in this flat land.");
+            case 18:
+                System.out.println("""
+                        Volcano. One or more mountains in a
+                        nearby range are volcanically active. This
+                        may be natural or it may be a consequence
+                        of Legacy flux or ancient manipulation.""");
+                break;
+            case 19:
+                System.out.println("""
+                        Weathered mountains. A significant skirt
+                        of hills is common. The rain shadow is likely
+                        limited due to the rounded, low mountains.""");
+                break;
+        }
+        System.out.println("\nPress enter to continue");
+        Scanner scanner = new Scanner(System.in);
+        String selection = scanner.nextLine();
+    }
+    public void terrainFeatureGenerator(){
+        String danger = null;
+        String use = null;
+        String lastEvent = null;
+        String population = null;
+        String antagonists = null;
+        String quirk = null;
+
+        Random random = new Random();
+        int dangerRoll = random.nextInt(6);
+        switch (dangerRoll) {
+            case 0 -> danger = "Safer than usual for someplace like it";
+            case 1 -> danger = "There’s one notable kind of danger there";
+            case 2 -> danger = "It’s got some site-specific flavors of peril";
+            case 3 -> danger = "It’s unusually dangerous in several ways";
+            case 4 -> danger = "It will quickly kill the unprepared or unwary";
+            case 5 -> danger = "It’s a death zone for all but the strongest";
+        }
+        int useRoll = random.nextInt(8);
+        switch (useRoll) {
+            case 0 -> use = "A rare and precious resource is found there";
+            case 1 -> use = "Ancient sites and relics are common there";
+            case 2 -> use = "It’s sacred land to a group or religion";
+            case 3 -> use = "Controlling it has military significance";
+            case 4 -> use = "It has substantial productive infrastructure";
+            case 5 -> use = "A major trade route goes through it";
+            case 6 -> use = "Uncontrolled, it’s a nest of raiders and worse";
+            case 7 -> use = "A mighty Working is still functioning there";
+        }
+        int lastEventRoll = random.nextInt(10);
+        switch (lastEventRoll) {
+            case 0 -> lastEvent = "A significant battle was fought there";
+            case 1 -> lastEvent = "A mad prophet tried to start a faith there";
+            case 2 -> lastEvent = "A usurper and supporters fled into it";
+            case 3 -> lastEvent = "A resource strike drew numerous people";
+            case 4 -> lastEvent = "A major nest of bandits or raiders formed";
+            case 5 -> lastEvent = "A rich ancient ruin was discovered there";
+            case 6 -> lastEvent = "An uncanny plague erupted in the area";
+            case 7 -> lastEvent = "Some grim and terrible thing was awoken";
+            case 8 -> lastEvent = "A community of outcasts or marginals formed";
+            case 9 -> lastEvent = "A natural or uncanny disaster struck there";
+        }
+        int popRoll = random.nextInt(4);
+        switch (popRoll) {
+            case 0 -> population = "Almost unpopulated for something like it";
+            case 1 -> population = "Very few settlers or workers there";
+            case 2 -> population = "Average or more population density";
+            case 3 -> population = "A rush of people have gone there";
+        }
+        int antagRoll = random.nextInt(12);
+        switch (antagRoll) {
+            case 0 -> antagonists = "Violent secessionist rebels";
+            case 1 -> antagonists = "Angry cultists of a local faith";
+            case 2 -> antagonists = "Locals who resent interloping outsiders";
+            case 3 -> antagonists = "A type of cunning, dangerous beast";
+            case 4 -> antagonists = "Relic-creatures of ancient settlements";
+            case 5 -> antagonists = "Elemental emanations of the disordered land";
+            case 6 -> antagonists = "A hostile sentient monster civilization";
+            case 7 -> antagonists = "Brutal envoys of the central government";
+            case 8 -> antagonists = "Raiders and bandits driven into the area";
+            case 9 -> antagonists = "Rapacious local lords and gang bosses";
+            case 10 -> antagonists = "Remnants of a furious native population";
+            case 11 -> antagonists = "Outsider remnants with a bitter grudge";
+        }
+        int quirkRoll = random.nextInt(20);
+        switch (quirkRoll) {
+            case 0 -> quirk = "It has significant magical structures in it";
+            case 1 -> quirk = "It has a place in the national origin legend";
+            case 2 -> quirk = "It is entirely man-made by ancient arts";
+            case 3 -> quirk = "Time and space sometimes slip there";
+            case 4 -> quirk = "The magical power there attracts wizards";
+            case 5 -> quirk = "It subtly changes those who live there";
+            case 6 -> quirk = "It’s holy land to a particular faith";
+            case 7 -> quirk = "It was formerly a different kind of terrain";
+            case 8 -> quirk = "It has human-worked vistas of beauty";
+            case 9 -> quirk = "It was formerly an Outsider stronghold";
+            case 10 -> quirk = "A significant part of it is subterranean";
+            case 11 -> quirk = "It’d expand were it not for ancient wards";
+            case 12 -> quirk = "It was a nature preserve of a megastructure";
+            case 13 -> quirk = "It’s maintained by an ancient artificial mind";
+            case 14 -> quirk = "Magic is somehow warped in its area";
+            case 15 -> quirk = "The flora and fauna are queasily “off”";
+            case 16 -> quirk = "The locals once populated it more heavily";
+            case 17 -> quirk = "Rulership of the feature is widely disputed";
+            case 18 -> quirk = "It’s riddled with caves and delvings";
+            case 19 -> quirk = "A unique type of sentient lives there";
+        }
+        System.out.println("How Dangerous is the Feature: " + "\033[31;1m" + danger + "\033[0m");
+        System.out.println("What use is the Feature: " + "\033[31;1m" + use + "\033[0m");
+        System.out.println("What Kind of Event Last Happened There: "+ "\033[31;1m" + lastEvent+ "\033[0m");
+        System.out.println("How Populated is the Feature: " + "\033[31;1m"+ population+ "\033[0m");
+        System.out.println("What Antagonists are Common There: " + "\033[31;1m"+ antagonists+ "\033[0m");
+        System.out.println("Optional Quirk of the Feature: " + "\033[31;1m"+ quirk+ "\033[0m");
+
+        System.out.println("\nPress enter to continue");
+        Scanner scanner = new Scanner(System.in);
+        String selection = scanner.nextLine();
+    }
     public void nationConstructionGenerator(){}
     public void nationThemeGenerator(){}
     public void societyPhysicalAppearance(){}
